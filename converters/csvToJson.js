@@ -27,12 +27,15 @@ function convertCsvToJson(csvFilePath, fieldMappings, jsonOutputPath) {
   });
 }
 
-const csvFilePath = 'path/to/your/csvfile.csv'; 
+const csvFilePath = '../inputs/csv_alumni_db.csv'; 
 const fieldMappings = {
-  jsonFieldName1: 'CSVColumnName1',
-  jsonFieldName2: 'CSVColumnName2',
+    nome: 'Nome completo',
+  email: 'e-mail',
+  dataDeIngresso: 'Ano Ingresso',
+  dataDeFormatura: 'Ano Formatura',
+  empresaAtual: 'Qual a empresa/organização que está trabalhando agora?',  
 };
-const jsonOutputPath = 'output.json'; 
+const jsonOutputPath = '../outputs/csvToJson.json'; 
 
 convertCsvToJson(csvFilePath, fieldMappings, jsonOutputPath)
   .then(message => console.log(message))
